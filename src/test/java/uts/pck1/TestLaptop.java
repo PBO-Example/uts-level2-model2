@@ -19,36 +19,36 @@ public class TestLaptop {
 		
 	static Stream<Arguments> rumArray1() {
     return Stream.of(
-        Arguments.of("laptop asus zen book duo",14,"Intel Core i5-5820K",6.00,512.00),
-        Arguments.of("laptop accer travelmate 6321",12,"Intel Core i5-5820K",2.00,512.00),
-		Arguments.of("laptop lenovo",15,"Intel Core i7-5820K",6.00,1024.00)
+        Arguments.of("laptop asus zen book duo",14,new Prosesor(),6.00,512.00),
+        Arguments.of("laptop accer travelmate 6321",12,new Prosesor(),2.00,512.00),
+		Arguments.of("laptop lenovo",15,new Prosesor("Intel Core i7-5820K",8),6.00,1024.00)
     );}
 	static Stream<Arguments> rumArray2() {
     return Stream.of(
-        Arguments.of(new Laptop("laptop asus zen book duo",14,"Intel Core i5-5820K",6.00,512.00)),
-        Arguments.of(new Laptop("laptop accer travelmate 6321",12,"Intel Core i5-5820K",2.00,512.00)),
-		Arguments.of(new Laptop("laptop lenovo",15,"Intel Core i7-5820K",6.00,1024.00))
+        Arguments.of(new Laptop("laptop asus zen book duo",14,new Prosesor(),6.00,512.00)),
+        Arguments.of(new Laptop("laptop accer travelmate 6321",12,new Prosesor(),2.00,512.00)),
+		Arguments.of(new Laptop("laptop lenovo",15,new Prosesor("Intel Core i7-5820K",8),6.00,1024.00))
     );}
 	
 	static Stream<Arguments> rumArray3() {
     return Stream.of(
-        Arguments.of("laptop asus zen book duo",14,"Intel Core i5-5820K",6.00,512.00,new Laptop("laptop asus zen book duo",14,"Intel Core i5-5820K",6.00,512.00)),
-        Arguments.of("laptop accer travelmate 6321",12,"Intel Core i5-5820K",2.00,512.00,new Laptop("laptop accer travelmate 6321",12,"Intel Core i5-5820K",2.00,512.00)),
-		Arguments.of("laptop lenovo",15,"Intel Core i7-5820K",6.00,1024.00,new Laptop("laptop lenovo",15,"Intel Core i7-5820K",6.00,1024.00))
+        Arguments.of("laptop asus zen book duo",14,new Prosesor(,6.00,512.00,new Laptop("laptop asus zen book duo",14,new Prosesor(),6.00,512.00)),
+        Arguments.of("laptop accer travelmate 6321",12,new Prosesor(),2.00,512.00,new Laptop("laptop accer travelmate 6321",12,new Prosesor(,2.00,512.00)),
+		Arguments.of("laptop lenovo",15,new Prosesor("Intel Core i7-5820K",8),6.00,1024.00,new Laptop("laptop lenovo",15,new Prosesor("Intel Core i7-5820K",8),6.00,1024.00))
     );}
 
 	static Stream<Arguments> rumArray4() {
     return Stream.of(
-        Arguments.of(new Laptop("laptop asus zen book duo",14,"Intel Core i5-5820K",6.00,512.00),"Spesifikasi laptop asus zen book duo:ukuran layar 14, prosesor Intel Core i5-5820K, RAM 6.0 GB, harddisk 512.0 GB"),
-        Arguments.of(new Laptop("laptop accer travelmate 6321",12,"Intel Core i5-5820K",2.00,512.00),"Spesifikasi laptop accer travelmate 6321:ukuran layar 12, prosesor Intel Core i5-5820K, RAM 2.0 GB, harddisk 512.0 GB"),
-		Arguments.of(new Laptop("laptop lenovo",15,"Intel Core i7-5820K",6.00,1024.00),"Spesifikasi laptop lenovo:ukuran layar 15, prosesor Intel Core i7-5820K, RAM 6.0 GB, harddisk 1024.0 GB")
+        Arguments.of(new Laptop("laptop asus zen book duo",14,new Prosesor(),6.00,512.00),"Spesifikasi laptop asus zen book duo:ukuran layar 14, prosesor Intel Core i5-5820K 4 inti, RAM 6.0 GB, harddisk 512.0 GB"),
+        Arguments.of(new Laptop("laptop accer travelmate 6321",12,new Prosesor(),2.00,512.00),"Spesifikasi laptop accer travelmate 6321:ukuran layar 12, prosesor Intel Core i5-5820K 4 inti, RAM 2.0 GB, harddisk 512.0 GB"),
+		Arguments.of(new Laptop("laptop lenovo",15,new Prosesor("Intel Core i7-5820K",8),6.00,1024.00),"Spesifikasi laptop lenovo:ukuran layar 15, prosesor Intel Core i7-5820K 8 inti, RAM 6.0 GB, harddisk 1024.0 GB")
     );}
 	
 	static Stream<Arguments> rumArray5() {
     return Stream.of(
-        Arguments.of(new Laptop("laptop asus zen book duo",14,"Intel Core i5-5820K",6.00,512.00),"adobe premiere",6.5,100,"\nSpesifikasi Laptop tidak sanggup menjalankan aplikasi adobe premiere"),
-        Arguments.of(new Laptop("laptop accer travelmate 6321",12,"Intel Core i5-5820K",2.00,512.00), "notepad++", 0.5,0.5,"\nLaptop sedang menjalankan aplikasi notepad++ sisa ram:1.5 GB, sisa harddisk:511.5 GB"),
-		Arguments.of(new Laptop("laptop lenovo",15,"Intel Core i7-5820K",6.00,1024.00),"OBS", 1.5, 50.0,"\nLaptop sedang menjalankan aplikasi OBS sisa ram:4.5 GB, sisa harddisk:974.0 GB")
+        Arguments.of(new Laptop("laptop asus zen book duo",14,new Prosesor(),6.00,512.00),"adobe premiere",6.5,100,"\nSpesifikasi Laptop tidak sanggup menjalankan aplikasi adobe premiere"),
+        Arguments.of(new Laptop("laptop accer travelmate 6321",12,new Prosesor(),2.00,512.00), "notepad++", 0.5,0.5,"\nLaptop sedang menjalankan aplikasi notepad++ sisa ram:1.5 GB, sisa harddisk:511.5 GB"),
+		Arguments.of(new Laptop("laptop lenovo",15,new Prosesor("Intel Core i7-5820K",8),6.00,1024.00),"OBS", 1.5, 50.0,"\nLaptop sedang menjalankan aplikasi OBS sisa ram:4.5 GB, sisa harddisk:974.0 GB")
     );}
 	
 	@Test
@@ -57,13 +57,13 @@ public class TestLaptop {
 		 rum = new Laptop();
 		 assertThat("laptop asus", equalToIgnoringCase(rum.getJenis()));
 		 assertEquals(14, rum.getUkuranLayar());
-		 assertEquals("Intel Core i7-5820K", rum.getProsesor());
+		 assertEquals(new Prosesor(), rum.getProsesor());
 		 assertEquals(4.00, rum.getRam()); 
 		 assertEquals(1024.00, rum.getHarddisk()); 
 	}
 	@ParameterizedTest
 	@MethodSource("rumArray1")
-	public void testKonstruktorII(String jen, int uk, String pro, double ram, double hdd) {
+	public void testKonstruktorII(String jen, int uk, Prosesor pro, double ram, double hdd) {
 		rum = new Laptop(jen,uk,pro,ram,hdd);
 		assertThat(jen, equalToIgnoringCase(rum.getJenis()));
 		 assertEquals(uk, rum.getUkuranLayar());
@@ -82,12 +82,13 @@ public class TestLaptop {
 		 assertEquals(r.getProsesor(), rum.getProsesor());
 		 assertEquals(r.getRam(), rum.getRam()); 
 		 assertEquals(r.getHarddisk(), rum.getHarddisk()); 
+		 assertNotSame(r.getProsesor(), rum.getProsesor(), "should not point to same Object");
 		 assertNotSame(r,rum, "should not point to same Object");
 	}
 
 	@ParameterizedTest
 	@MethodSource("rumArray3")
-	void testSetter(String jen, int uk, String pro, double ram, double hdd,Laptop r) {
+	void testSetter(String jen, int uk, Prosesor pro, double ram, double hdd,Laptop r) {
 		rum = new Laptop();
 		rum.setJenis(jen);
 		rum.setUkuranLayar(uk);

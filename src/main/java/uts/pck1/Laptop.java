@@ -4,7 +4,7 @@ public class Laptop{
 	//atribut
 	private String jenis;
 	private int ukuranLayar;
-	private String prosesor;
+	private Prosesor prosesor;
 	private double ram;
 	private double harddisk;
 	
@@ -12,21 +12,21 @@ public class Laptop{
 	public Laptop(){
 		jenis ="laptop asus";
 		ukuranLayar=14;
-		prosesor="Intel Core i7-5820K";
+		prosesor=new Prosesor();
 		ram=4.00;
 		harddisk=1024.00;
 	}
-	public Laptop(String jenis, int ukuranLayar,String prosesor,double ram,double harddisk){
+	public Laptop(String jenis, int ukuranLayar,Prosesor prosesor,double ram,double harddisk){
 		this.jenis =jenis;
 		this.ukuranLayar=ukuranLayar;
-		this.prosesor=prosesor;
+		this.prosesor=new Prosesor(prosesor);
 		this.ram=ram;
 		this.harddisk=harddisk;
 	}
 	public Laptop(Laptop K){
 		jenis = K.jenis;
 		ukuranLayar=K.ukuranLayar;
-		prosesor=K.prosesor;
+		prosesor=new Prosesor(K.prosesor);
 		ram=K.ram;
 		harddisk=K.harddisk;
 	}
@@ -38,7 +38,7 @@ public class Laptop{
 	public void setUkuranLayar(int ukuranLayar){
 		this.ukuranLayar=ukuranLayar;
 	}
-	public void setProsesor(String prosesor){
+	public void setProsesor(Prosesor prosesor){
 		this.prosesor=prosesor;
 	}
 	public void setRam(double ram){
@@ -54,7 +54,7 @@ public class Laptop{
 	public int getUkuranLayar( ){
 		return ukuranLayar;
 	}
-	public String getProsesor( ){
+	public Prosesor getProsesor( ){
 		return prosesor;
 	}
 	public double getRam(){
@@ -81,7 +81,7 @@ public class Laptop{
 	public boolean equals(Object o){
 		if (o instanceof Laptop){
 			Laptop lt = (Laptop) o;
-			return (getJenis().equalsIgnoreCase(lt.getJenis()) && getUkuranLayar()== lt.getUkuranLayar() && getProsesor().equalsIgnoreCase(lt.getProsesor()) && getRam()==lt.getRam() &&getHarddisk()==lt.getHarddisk());
+			return (getJenis().equalsIgnoreCase(lt.getJenis()) && getUkuranLayar()== lt.getUkuranLayar() && getProsesor().equals(lt.getProsesor()) && getRam()==lt.getRam() &&getHarddisk()==lt.getHarddisk());
 		}
 		return false;
 	}
