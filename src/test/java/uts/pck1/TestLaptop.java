@@ -32,8 +32,8 @@ public class TestLaptop {
 	
 	static Stream<Arguments> rumArray3() {
     return Stream.of(
-        Arguments.of("laptop asus zen book duo",14,new Prosesor(,6.00,512.00,new Laptop("laptop asus zen book duo",14,new Prosesor(),6.00,512.00)),
-        Arguments.of("laptop accer travelmate 6321",12,new Prosesor(),2.00,512.00,new Laptop("laptop accer travelmate 6321",12,new Prosesor(,2.00,512.00)),
+        Arguments.of("laptop asus zen book duo",14,new Prosesor(),6.00,512.00,new Laptop("laptop asus zen book duo",14,new Prosesor(),6.00,512.00)),
+        Arguments.of("laptop accer travelmate 6321",12,new Prosesor(),2.00,512.00,new Laptop("laptop accer travelmate 6321",12,new Prosesor(),2.00,512.00)),
 		Arguments.of("laptop lenovo",15,new Prosesor("Intel Core i7-5820K",8),6.00,1024.00,new Laptop("laptop lenovo",15,new Prosesor("Intel Core i7-5820K",8),6.00,1024.00))
     );}
 
