@@ -13,6 +13,8 @@ Baca instruksi yang diberikan dengan baik.
 
 >**Untuk mendapatkan nilai sempurna pada level ini, konsentrasi menyesuaikan kode program kelas Laptop.java yang anda kerjakan pada level 1 sehingga semua konstruktor dan method dapat menerima atribut prosesor yang bertipe Prosesor (bukan String).**
 
+>**Perhatikan bahwa keluaran method toString() dari kelas Laptop perlu diupdate. Silahkan cek gambar yang ada pada rubrik penilaian no. 7**
+
 
 ## Rubrik Penilaian 
 1. **[Poin 15]** program dilengkapi dengan konstruktor tanpa parameter yang set data dengan nilai default sebagai berikut:
@@ -59,7 +61,7 @@ jenis laptop asus, ukuranLayar 14 inch, prosesornya Intel Core i7-5820K, ram 4 G
 		> gradle test --tests TestLaptop.testMenjalankanAplikasi
 
 6. **[Poin 15]** program dilengkapi dengan method toString() yang akan menampilkan data di dalam objek Rumah. Perhatikan contoh keluaran yang diberikan.
-![Image of output of toString()](http://api.puro.del.ac.id/v1/file/2729c2c68e98e17eb57752d0995f38fe)	
+![Image of output of toString()](http://api.puro.del.ac.id/v1/file/b76c30c13400197388116f475d310cc8)	
 	
 	> Perintah test: 
 	
