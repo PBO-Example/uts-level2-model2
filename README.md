@@ -13,7 +13,7 @@ Baca instruksi yang diberikan dengan baik.
 
 >**Untuk mendapatkan nilai sempurna pada level ini, konsentrasi menyesuaikan kode program kelas Laptop.java yang anda kerjakan pada level 1 sehingga semua konstruktor dan method dapat menerima atribut prosesor yang bertipe Prosesor (bukan String).**
 
->**Perhatikan bahwa keluaran method toString() dari kelas Laptop perlu diupdate. Silahkan cek gambar yang ada pada rubrik penilaian no. 7**
+>**Perhatikan bahwa keluaran method toString() dari kelas Laptop perlu diupdate. Silahkan cek gambar yang ada pada rubrik penilaian no. 6**
 
 
 ## Rubrik Penilaian 
